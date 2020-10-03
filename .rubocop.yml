@@ -1,0 +1,18 @@
+inherit_from: .rubocop_todo.yml
+require:
+  - rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.7
+  NewCops: enable
+
+Metrics/MethodLength:
+  Max: 17
+
+RSpec/MultipleMemoizedHelpers:
+  Exclude:
+    - "**/*spec.rb"
+
+Metrics/BlockLength:
+  Exclude:
+    - "**/*spec.rb"
